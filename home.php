@@ -7,7 +7,7 @@ include ('view/header.php');
 
         if($name == 'Home'){
             include ('view/menu.php');
-            echo('<h1 style="Text-align: center;">Inicio</h1>');
+            include ('view/pages/home.php');
             include ('view/footer.php');
 
         };
@@ -37,9 +37,12 @@ include ('view/header.php');
         };
     }
     else{
+            echo ('</br>');
+            echo ('</br>');
+            echo ('</br>');
             echo('<h2 style="Text-align: center;">Huuuuuum, parece que alguém quis burlar a senha....</h2>');
-            echo('<h4 style="Text-align: center;">Acesse <a href="index.php">AQUI</a> Para fazer o login</h4>');
-            echo('<center><img style="max-width: 400px;"src="pani.jpg"></center>');
+            echo('<center><img style="max-width: 400px;"src="pani.gif"></center>');
+            echo('<h4 style="Text-align: center;">Acesse <a href="index.php">AQUI</a> para fazer o login</h4>');
 
     };
  ?>
