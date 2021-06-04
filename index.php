@@ -1,13 +1,13 @@
 <?php include ('view/header.php');
         @$getsenha = $_POST['pass'];
         @$cripto = hash('md5', $getsenha, false);
-        @$origin = 'cdafe312e8f866c0b0c9743f61146006';
+        @$origin = 'cdafe312e8f866c0b0c9743f61146006'; //SENHA, TROQUE POR ALGUMA MD5
         @$opcao = $_POST['opition'];
 
         //Senha correta
         if($cripto == $origin || $opcao !=NULL){
             include ('view/menu.php');
-            include_once ('home.php');
+            include_once ('view/pages/home.php');
             include ('view/footer.php');
         } 
         //Página com erro de senha

@@ -19,7 +19,6 @@ include('view/menu.php');
             }           
             break;
         case 'Enviar ISO':
-
             //Sistemas Operacionais
             $dir = "arquivos/sistemasop/"; 
             // Move o arquivo da pasta temporaria de upload para a pasta de destino 
@@ -43,6 +42,31 @@ include('view/menu.php');
                 echo "Erro, o arquivo n&atilde;o pode ser enviado."; 
             }           
             break;
+        case 'Enviar Driver':
+            //Drivers de Impressoras
+            $dir = "arquivos/impressoras/";
+            // Move o arquivo da pasta temporaria de upload para a pasta de destino 
+            if (move_uploaded_file($arquivo["tmp_name"], "$dir/".$arquivo["name"])) { 
+                include ('view/pages/printer.php');
+                echo "Arquivo enviado com sucesso!"; 
+            } 
+            else { 
+                echo "Erro, o arquivo n&atilde;o pode ser enviado."; 
+            }           
+            break;
+        case 'Enviar Arquivo':
+            //Drivers de Impressoras
+            $dir = "arquivos/impressoras/";
+            // Move o arquivo da pasta temporaria de upload para a pasta de destino 
+            if (move_uploaded_file($arquivo["tmp_name"], "$dir/".$arquivo["name"])) { 
+                include ('view/pages/ti.php');
+                echo "Arquivo enviado com sucesso!"; 
+            } 
+            else { 
+                echo "Erro, o arquivo n&atilde;o pode ser enviado."; 
+            }           
+            break;
+        
         case '0':
             echo ("<h2>SELECIONE UM ARQUIVO PARA ENVIAR</h2>");
 

@@ -35,6 +35,16 @@ include ('view/header.php');
 
 
         };
+        if($name == 'Drivers'){
+            include ('view/menu.php');
+            include ('view/pages/drivers.php');
+            include ('view/footer.php');
+        };
+        if($name == 'Arquivos TI'){
+            include ('view/menu.php');
+            include ('view/pages/ti.php');
+            include ('view/footer.php');
+        };
     }
     else{
             echo ('</br>');
