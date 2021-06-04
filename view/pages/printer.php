@@ -5,7 +5,7 @@
         $diretorio = dir($path);
             while($arquivo = $diretorio -> read()){
                 if ($arquivo != "." && $arquivo != ".."){
-                    echo "<li><a href='".$path.$arquivo."'>".$arquivo."</a></li><br/>";
+                    echo "<a href='".$path.$arquivo."'><li>".$arquivo."</li></a><br/>";
                 }
             }
                 $diretorio -> close();
@@ -24,9 +24,10 @@
         <?php
 
             $diretorio = dir($path);
+                echo "<option value='Selecione'>Selecione</option>";
                 while($arquivo = $diretorio -> read()){
                     if ($arquivo != "." && $arquivo != ".."){
-                        echo "<option value='".$arquivo."'>".$arquivo."</option>>";
+                        echo "<option value='".$arquivo."'>".$arquivo."</option>";
                     }
                 }
             $diretorio -> close();
@@ -34,3 +35,7 @@
     </select>
     <input type="submit" name="select" value="Excluir Driver" />
 </form>
+
+</br>
+</br>
+</br>

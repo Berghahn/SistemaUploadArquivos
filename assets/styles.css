@@ -4,21 +4,32 @@ html{
 header{
     background-image:linear-gradient(to right, rgb(0, 106, 226),rgb(132, 1, 255));
     height: 50px;
-    display:block;
-    margin: 0;}
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+header form{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between; 
+}
 header form .input:hover{
+    position: relative;
+  display: inline-block;
     background-color:  rgb(0, 114, 245);}
-header .input{   
+header .input{  
     color: white;
     background-color: rgb(0, 106, 226, 0);
     text-align: center;
     height: 100%;
     padding-left: 30px;
     padding-right: 30px;
-    text-align: center; 
-    list-style-type: none;
     margin-right: 50px;
-    border-style: none;}
+    border-style: none;
+} 
 header .menu{
     margin: 0;
     height: 100%;
@@ -40,18 +51,25 @@ body{
     width: 70%;
     height: 100%;
     list-style-type: none;}
-.content li a{
+.content li{
+    padding: 10px 0 10px 10px;
+    border-left: 6px solid;
+    border-color: #2196F3!important;
+    background-color: #ddffff!important;
+}
+.content a{
     color:black;
     list-style-type: none;
     text-decoration: none;}
-.content li a:hover{
-    color:rgba(0, 0, 0, 0.7);}
+.content li:hover{
+    background-image:linear-gradient(to right, rgb(0, 106, 226, 0.2),rgb(132, 1, 255, 0.2));
+}
 @media screen and (max-width: 600px){
-    header form{ 
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;}    }
+    header{ 
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        }} 
 /*                   FOOTER                   */
 footer{
 
